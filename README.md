@@ -5,8 +5,11 @@
 </p>
 
 <p align="center">
+    <a href="https://github.com/hnsecurity/kraken"><img src="https://img.shields.io/github/stars/hnsecurity/kraken.svg"></a>
+    <a href="https://github.com/hnsecurity/kraken"><img src="https://img.shields.io/github/forks/hnsecurity/kraken.svg"></a>
+    <a href="https://github.com/hnsecurity/kraken/issues"><img src="https://img.shields.io/github/issues-raw/hnsecurity/kraken.svg"></a>
     <a href="/LICENSE.txt"><img src="https://img.shields.io/badge/license-MIT-blueviolet"></a>
-    <a href="#"><img src="https://img.shields.io/badge/release-1.0-blueviolet"></a>
+    <!--a href="#"><img src="https://img.shields.io/badge/release-1.0-blueviolet"></a-->
 </p>
 
 
@@ -50,8 +53,8 @@ To speed up and standardize this process we developed Kraken. Even if Kraken is 
 
   
  ## Authors
-- Maurizio Agazzini, Principal Security Analyst at HN Security
-- Stefano Alberto, Security Analyst at HN Security
+- Maurizio Agazzini, Principal Security Analyst at HN Security &nbsp; <a href="https://twitter.com/0x696e6f6465"><img src="https://img.shields.io/twitter/follow/0x696e6f6465?label=%400x696e6f6465&style=social"></a>
+- Stefano Alberto, Security Analyst at HN Security &nbsp; <a href="https://twitter.com/XatoPhi"><img style="vertical-align:middle" src="https://img.shields.io/twitter/follow/xatophi?label=%40xatophi&style=social"></a>
  
   
  ## Features
