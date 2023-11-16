@@ -336,7 +336,7 @@ def password_topology_stats(ws_stats, start_line, args, list_users, list_user_pa
                     if w in dictionary_results:
                         dictionary_results[w] += 1
                     else:
-                        dictionary_results[w] = 0
+                        dictionary_results[w] = 1
         except:
             pass
     # create password type stats
