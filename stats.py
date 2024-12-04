@@ -151,7 +151,7 @@ def password_length_stats(ws_stats, start_line, args, list_users, list_user_pass
         else:
             password_len[len(list_user_password[cur_user])] += 1
 
-    ws_stats[f"B{start_line}"] = "Password Lenght"
+    ws_stats[f"B{start_line}"] = "Password Length"
     ws_stats[f"B{start_line}"].font = Font(bold=True)
 
     cur_line = start_line + 1
