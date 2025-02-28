@@ -299,7 +299,7 @@ def password_topology_stats(ws_stats, start_line, args, list_users, list_user_pa
 
         # check if password is the username
         if cur_user.upper() == list_user_password[cur_user].upper():
-            username_based += 1
+            username_same += 1
         else:
             # check if password is derived from username
             r = convert_into_l33t_regex(cur_user)
@@ -342,9 +342,10 @@ def password_topology_stats(ws_stats, start_line, args, list_users, list_user_pa
     # create password type stats
     password_type = {}
 
-    password_type["Based on username"] = username_based
     password_type["Same as username"] = username_same
+    password_type["Based on username"] = username_based
     password_type["Repeated word"] = repeated_word
+    password_type["Others"] = len(list_user_password) - username_same - username_based - repeated_word
 
 
     try:
