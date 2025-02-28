@@ -98,7 +98,7 @@ try:
                 cur_user, cur_password = cur_line.split(':', 1)
                 
                 # decode the $HEX[] hashcat format
-                m = re.search('^\$HEX\[([0-9a-f]+)\]$',cur_password)
+                m = re.search(r'^\$HEX\[([0-9a-f]+)\]$',cur_password)
                 if m:
                     cur_password = bytes.fromhex(m[1]).decode()
             except:

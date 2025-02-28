@@ -59,53 +59,53 @@ def characters_analysis_stats(ws_stats, start_line, args, list_users, list_user_
     for cur_user in list_user_password:
 
         # don't count on password history
-        if re.search("_history[0-9]*$", cur_user):
+        if re.search(r"_history[0-9]*$", cur_user):
             continue
 
         # check password chars
-        if re.search("(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?!.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?!.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
             password_chars["Uppercase"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?!.*\d)(?!.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?!.*\d)(?!.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
             password_chars["Lowercase"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?!.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?!.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
             password_chars["Digits"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?!.*\d)(?!.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?!.*\d)(?!.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
             password_chars["Specials"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
             password_chars["Digits Lowercase"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?!.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?!.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
             password_chars["Digits Uppercase"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
             password_chars["Digits Specials"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
             password_chars["Lowercase Uppercase"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?!.*\d)(?!.*[A-Z])(?=.*[a-z])((?=.*[\W])|(?=.*[\s]))", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?!.*\d)(?!.*[A-Z])(?=.*[a-z])((?=.*[\W])|(?=.*[\s]))", list_user_password[cur_user]):
             password_chars["Lowercase Specials"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
             password_chars["Uppercase Specials"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?!.*[\W])", list_user_password[cur_user]):
             password_chars["Digits Lowercase Uppercase"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?=.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?!.*[A-Z])(?=.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
             password_chars["Digits Lowercase Specials"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?!.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
             password_chars["Digits Uppercase Specials"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?!.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
             password_chars["Lowercase Uppercase Specials"] += 1
             continue
-        if re.search("(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
+        if re.search(r"(?=^[^\x0d\x0a]*$)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[\W])", list_user_password[cur_user]):
             password_chars["Digits Lowercase Uppercase Specials"] += 1
             continue
 
@@ -223,7 +223,7 @@ def password_leaked_stats(ws_stats, start_line, args, list_users, list_user_pass
 
     for cur_user in tqdm(list_user_password):
         # don't count on password history
-        if re.search("_history[0-9]*$", cur_user):
+        if re.search(r"_history[0-9]*$", cur_user):
             continue
         
         leaked = False
@@ -294,7 +294,7 @@ def password_topology_stats(ws_stats, start_line, args, list_users, list_user_pa
     for cur_user in list_user_password:
 
         # don't count on password history
-        if re.search("_history[0-9]*$", cur_user):
+        if re.search(r"_history[0-9]*$", cur_user):
             continue
 
         # check if password is the username
@@ -401,7 +401,7 @@ def levenshtein_distance_stats(ws_stats, start_line, args, list_users, list_user
     for cur_user in list_user_password:
 
         # don't count on password history
-        if re.search("_history[0-9]*$", cur_user):
+        if re.search(r"_history[0-9]*$", cur_user):
             continue
 
         # check Levenshtein distance if history0 exist
