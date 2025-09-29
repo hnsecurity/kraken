@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  For more information check out <a href="https://security.humanativaspa.it/cracked-password-analytics-with-kraken/">this article</a>
+  For more information check out <a href="https://hnsecurity.it/blog/cracked-password-analytics-with-kraken/">this article</a>
 </p>
 <hr>
 
@@ -66,7 +66,7 @@ This chart is pretty simple, yet crucial in understanding the impact of the anal
 <br>
 
 <p align="center">
-  <img class="aligncenter wp-image-2133 size-large" src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/password_analysis-e1682347074881-1024x505.png" alt="" width="640" height="316" />
+  <img class="aligncenter wp-image-2133 size-large" src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/password_analysis-e1682347074881-1024x505.png" alt="" width="640" height="316" />
 </p>
   
 </div>
@@ -77,7 +77,7 @@ In this step we analyze the <strong>charset used in the cracked passwords</stron
 <br>
 
  <p align="center">
-   <img class="aligncenter wp-image-2132 size-large" src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/character_analysis-e1682347161799-1024x504.png" alt="" width="640" height="315" />
+   <img class="aligncenter wp-image-2132 size-large" src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/character_analysis-e1682347161799-1024x504.png" alt="" width="640" height="315" />
  </p>
  
 <div>
@@ -88,7 +88,7 @@ This analysis is self explanatory, we want to check the <strong>length of the cr
 <br>
 
 <p align="center">
-<img class="aligncenter wp-image-2134 size-large" src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/password_length-e1682347189924-1024x507.png" alt="" width="640" height="317" />
+<img class="aligncenter wp-image-2134 size-large" src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/password_length-e1682347189924-1024x507.png" alt="" width="640" height="317" />
 </p>
 <div>
 <h4><strong>Topology analysis</strong></h4>
@@ -99,7 +99,7 @@ With this analysis, we try to highlight <strong>patterns in cracked passwords</s
 <br>
 
 <p align="center">
-  <img class="aligncenter wp-image-2135 size-large" src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/password_topology-e1682347110451-1024x504.png" alt="" width="640" height="315" />
+  <img class="aligncenter wp-image-2135 size-large" src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/password_topology-e1682347110451-1024x504.png" alt="" width="640" height="315" />
  </p>
 </div>
 <div>
@@ -122,7 +122,7 @@ Note that we need a token to use this API. To extract a valid token, the tool wi
 <br>
 
 <p align="center">
-  <img class="aligncenter wp-image-2137 size-large" src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/leaked_password-e1682347213829-1024x504.png" alt="" width="640" height="315" />
+  <img class="aligncenter wp-image-2137 size-large" src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/leaked_password-e1682347213829-1024x504.png" alt="" width="640" height="315" />
 </p>
 <div></div>
 <div>
@@ -135,14 +135,14 @@ The <strong>Levenshtein distance</strong> is perfect for this purpose as it meas
 <br>
 
 <p align="center">
-  <img class="aligncenter wp-image-2147 " src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/LEVENSHTEIN_EXAMPLES-1.png" alt="" width="473" height="226" />
+  <img class="aligncenter wp-image-2147 " src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/LEVENSHTEIN_EXAMPLES-1.png" alt="" width="473" height="226" />
 </p>
 <div></div>
 <div>Right now, we perform this analysis by computing the distance between the current and the last changed password, without considering the complete password history.</div>
 <br>
 
 <p align="center">
-  <img class="aligncenter wp-image-2136 size-large" src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/levenshtein_distance-e1682347258520-1024x507.png" alt="" width="640" height="317" />
+  <img class="aligncenter wp-image-2136 size-large" src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/levenshtein_distance-e1682347258520-1024x507.png" alt="" width="640" height="317" />
 </p>
 <div>
 <h4><strong>Common passwords</strong></h4>
@@ -151,7 +151,7 @@ Kraken also creates a <strong>ranking of the most common passwords</strong> in t
 <br>
 
 <p align="center">
-  <img class="aligncenter wp-image-2139" src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/04/common_password.png" alt="" width="392" height="163" />
+  <img class="aligncenter wp-image-2139" src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/04/common_password.png" alt="" width="392" height="163" />
 </p>
 <h4><strong>Common hashes</strong></h4>
 Similarly to the common password ranking, in this case, we <strong>rank the most common password hashes</strong>. This allows us to identify common passwords that we weren't able to crack that could add more information to the previous analysis.
@@ -159,7 +159,7 @@ Similarly to the common password ranking, in this case, we <strong>rank the most
 </div>
 <br>
 <p align="center">
-  <img class="aligncenter wp-image-2223 " src="https://security.humanativaspa.it/sec/wp-content/uploads/2023/05/common_hash.png" alt="" width="544" height="182" />
+  <img class="aligncenter wp-image-2223 " src="https://hnsecurity.it/blog/sec/wp-content/uploads/2023/05/common_hash.png" alt="" width="544" height="182" />
 </p>
 <div>
 
